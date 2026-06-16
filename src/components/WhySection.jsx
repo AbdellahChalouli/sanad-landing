@@ -1,8 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { FaEye, FaLanguage, FaLightbulb } from "react-icons/fa";
-import { FaHandshakeSimple } from "react-icons/fa6";
-import { BsFillMoonStarsFill } from "react-icons/bs";
-import { RiRobot2Fill } from "react-icons/ri";
 const features = [
   {
     icon: <FaEye />,
