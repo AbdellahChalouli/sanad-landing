@@ -1,0 +1,53 @@
+================================================================
+  EmailJS Template — Copy this into your EmailJS template editor
+================================================================
+
+SUBJECT:
+🔔 مستخدم جديد سجّل اهتمامه بالتطبيق
+
+BODY:
+السلام عليكم،
+
+سجّل مستخدم جديد اهتمامه بتطبيقك!
+
+━━━━━━━━━━━━━━━━━━━━━━━━
+📧 البريد الإلكتروني : {{gmail}}
+👨‍👧‍👦 عدد الأطفال       : {{n_childs}}
+⏱️  ساعات الاستخدام   : {{n_hours}}
+✅ مستوى الاهتمام    : {{interested}}
+📝 رسالة              : {{message}}
+━━━━━━━━━━━━━━━━━━━━━━━━
+
+تم الإرسال تلقائياً عبر موقع smoke-test.
+
+
+================================================================
+  VARIABLES USED IN THE TEMPLATE (copy exactly as-is):
+================================================================
+
+{{gmail}}       → البريد الإلكتروني للمستخدم
+{{n_childs}}    → عدد أطفاله
+{{n_hours}}     → ساعات استخدام الطفل يومياً
+{{interested}}  → مستوى اهتمامه
+{{message}}     → رسالته الاختيارية
+{{to_email}}    → بريدك الذي تريد الإشعار عليه (اجعله To: في الإعدادات)
+
+================================================================
+  SETUP STEPS:
+================================================================
+
+1. Go to https://emailjs.com → Sign in
+2. Email Services → Add New Service → Gmail → Connect your Gmail
+   → Note the Service ID (already have: service_f03iekd)
+
+3. Email Templates → Create New Template
+   → Paste the Subject and Body above
+   → In "To Email" field put: {{to_email}}
+   → Save → Note the Template ID
+
+4. Account → API Keys → Note the Public Key
+
+5. Open src/config.js and fill in:
+   EMAILJS_PUBLIC_KEY   = your public key
+   EMAILJS_TEMPLATE_ID  = your template ID
+   NOTIFICATION_EMAIL   = your Gmail address
